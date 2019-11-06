@@ -1,0 +1,15 @@
+<section class="content-section testimonials">
+    <div class="container">
+        <div class="row">
+            {% for item in testimonials %}
+                <div class="col-md-4">
+                    <div class="testimonials-img-wrap">
+                        <div class="testimonials-img" style="background-image: url({{ asset(item.imageUrl) }})"></div>
+                    </div>
+                    <h2 class="testimonials-title">{{ item.fullname }}</h2>
+                    <div class="testimonials-description">{{ item.description }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

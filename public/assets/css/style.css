@@ -1,0 +1,183 @@
+/* CSS Document */
+
+/*-----------------------------------------------------------------*/
+/*--- Font Face Including ---*/
+/*-----------------------------------------------------------------*/
+/*------------------------------------------------------*/
+/*--- Font Family :: [Open Sans] :: Regular ---*/
+/*------------------------------------------------------*/
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('../fonts/opensans-regular.eot');
+    src: url('../fonts/opensans-regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/opensans-regular.woff') format('woff'),
+        url('../fonts/opensans-regular.ttf') format('truetype'),
+        url('../fonts/opensans-regular.svg#open_sansregular') format('svg');
+    font-weight: normal !important;
+    font-style: normal !important;
+}
+/*------------------------------------------------------*/
+/*--- Font Family :: [Raleway] :: Medium ---*/
+/*------------------------------------------------------*/
+@font-face {
+    font-family: 'RalewayMedium';
+    src: url('../fonts/raleway-medium.eot');
+    src: url('../fonts/raleway-medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-medium.woff2') format('woff2'),
+         url('../fonts/raleway-medium.woff') format('woff'),
+         url('../fonts/raleway-medium.ttf') format('truetype'),
+         url('../fonts/raleway-medium.svg#RalewayMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*-----------------------------------------------------------------*/
+/*--- Custom Reset Styles ---*/
+/*-----------------------------------------------------------------*/
+body, html { margin: 0; padding: 0; outline: none; min-width: 320px; }
+body { color: #8f8f8f; font: 16px/24px 'OpenSansRegular', Helvetica, Arial, sans-serif; }
+p, img { margin: 0; padding: 0; }
+h1, h2, h3, h4 ,h5, h6 { font-weight: normal; padding: 0; margin: 0; }
+button, a { outline: none; -webkit-outline: none; -moz-outline: none; }
+a img { border: 0; display: block; outline: none; -webkit-outline: none; -moz-outline: none; }
+a, a:focus { color: #000; text-decoration: none; }
+a:hover, a:focus { text-decoration: none; outline: none; }
+a:hover { color: #888; }
+a, button { transition: color 0.3s ease; }
+button, input[type="submit"] { border: 0; box-shadow: none; line-height: normal;  outline: none; text-shadow: none; border-radius: 0; }
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="tel"], textarea, select { font: 16px/24px 'OpenSansRegular', Helvetica, Arial, sans-serif; border-radius: 0; outline: none; -webkit-appearance: none; box-shadow: none; border: none; }
+input::-webkit-input-placeholder { opacity: 1; color: #b6b6b6; }
+input:-ms-input-placeholder { opacity: 1; color: #b6b6b6; }
+input:-moz-placeholder { opacity: 1; color: #b6b6b6; }
+input::-moz-placeholder { opacity: 1; color: #b6b6b6; }
+textarea::-webkit-input-placeholder { opacity: 1; color: #b6b6b6; }
+textarea:-ms-input-placeholder { opacity: 1; color: #b6b6b6; }
+textarea:-moz-placeholder { opacity: 1; color: #b6b6b6; }
+textarea::-moz-placeholder { opacity: 1; color: #b6b6b6; }
+/*-----------------------------------------------------------------*/
+/*--- Custom Lists Styles ---*/
+/*-----------------------------------------------------------------*/
+.header-menu ul, .mobile-menu ul { list-style: none; padding: 0; margin: 0; }
+/*-----------------------------------------------------------------*/
+/*--- Custom Fonts ---*/
+/*-----------------------------------------------------------------*/
+.content-section-title, .news-title, .testimonials-title, .hero-banner-title { font-family: 'RalewayMedium'; font-weight: normal; font-style: normal; }
+/*-----------------------------------------------------------------*/
+/*--- Canvas Styles ---*/
+/*-----------------------------------------------------------------*/
+.content-section { padding: 80px 0; }
+.content-section-title { font-size: 2.5rem; line-height: 1.2; color: #000; padding: 0 0 30px; }
+
+.container--md { max-width: 900px; }
+.container--sm { max-width: 600px; }
+/*-----------------------------------------------------------------*/
+/*--- Header Styles ---*/
+/*-----------------------------------------------------------------*/
+.header { position: fixed; left: 0; top: 0; width: 100%; background: rgba(0,0,0,0.4); z-index: 10001; }
+/*-----------------------------------------------------------------*/
+/*--- Logo Styles ---*/
+/*-----------------------------------------------------------------*/
+.header .logo a { display: flex; align-items: center; height: 54px; } 
+.header .logo img { max-height: 30px; height: auto; width: auto; max-width: 100%; }
+/*-----------------------------------------------------------------*/
+/*--- Main Menu Styles ---*/
+/*-----------------------------------------------------------------*/
+.header-menu { text-align: right; position: static; }
+.header-menu .toggle-menu { display: none; }
+.header-menu > ul { display: inline-block; vertical-align: bottom; }
+.header-menu li { float: left; position: relative; }
+.header-menu li a { color: #fff; font-size: 1rem; padding: 15px 25px; display: block; }
+.header-menu li.header-menu-item--active a { color: #008388; }
+
+.header-menu li:hover > a { color: #008388 }
+
+.mobile-menu { display: none; }
+/*-----------------------------------------------------------------*/
+/*--- Buttons Styles ---*/
+/*-----------------------------------------------------------------*/
+.btn { line-height: 1; display: inline-block; vertical-align: middle; text-align: center; transition-property: color, background-color; cursor: pointer; }
+
+.btn--base { color: #fff; background: #008388; border-radius: 4px; }
+.btn--base:hover { color: #fff; background: #000; }
+
+.btn--md { font-size: 1rem; padding: 12px 5px; min-width: 200px; }
+.btn--lg { font-size: 1.1rem; padding: 18px 5px; min-width: 200px; }
+/*-----------------------------------------------------------------*/
+/*--- Hero Banner Styles ---*/
+/*-----------------------------------------------------------------*/
+.hero-banner { background: no-repeat center / cover; height: 100vh; display: flex; align-items: center; }
+.hero-banner--dark { color: #fff; }
+.hero-banner-title { font-size: 3rem; line-height: 1.2; }
+.hero-banner-title, .hero-banner-description, .hero-banner .btn-wrap { padding: 10px 0; }
+/*-----------------------------------------------------------------*/
+/*--- Testimonials Styles ---*/
+/*-----------------------------------------------------------------*/
+.testimonials-img { background: no-repeat center / cover; height: 100px; width: 100px; border-radius: 100%; display: inline-block; }
+.testimonials-title { font-size: 1.4rem; line-height: 1.2; color: #000; }
+.testimonials-img-wrap, .testimonials-title, .testimonials-description { padding: 5px 0; text-align: center; }
+/*-----------------------------------------------------------------*/
+/*--- News Styles ---*/
+/*-----------------------------------------------------------------*/
+.news-img { background: no-repeat center / cover; padding-bottom: 60%; }
+.news-item { padding: 10px 0; }
+.news-title { font-size: 1.4rem; line-height: 1.2; color: #000; }
+.news-img-wrap, .news-title, .news-description { padding: 5px 0; }
+.news .btn-wrap { padding: 20px 0 10px; text-align: center; }
+/*-----------------------------------------------------------------*/
+/*--- Image Section Styles ---*/
+/*-----------------------------------------------------------------*/
+.image-section { min-height: 70vh; background: no-repeat center / cover; }
+/*-----------------------------------------------------------------*/
+/*--- Form Styles ---*/
+/*-----------------------------------------------------------------*/
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="tel"], textarea, select { display: block; width: 100%; padding: 0 15px; height: 50px; }
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="number"]:focus, textarea:focus, select:focus { box-shadow: none; border-color: #777; } 
+
+.form-element { padding: 10px 0; }
+/*-----------------------------------------------------------------*/
+/*--- Sign Up Styles ---*/
+/*-----------------------------------------------------------------*/
+.signup { background: no-repeat center / cover; }
+.signup-container { background: #f7f7f7; padding: 30px; }
+/*-----------------------------------------------------------------*/
+/*--- Footer Styles ---*/
+/*-----------------------------------------------------------------*/
+.footer { font-size: 0.9rem; padding: 30px 0; color: #000; }
+.footer span { color: #008388; }
+/*-----------------------------------------------------------------*/                               
+/*--- Media Queries Styles ---*/
+/*-----------------------------------------------------------------*/
+/*-----------------------------------------------------------------*/
+/*---------- Styles for Mobile 0 - 767px -----------*/
+/*-----------------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+    .wysiwyg blockquote { padding: 0 15px; }
+    .wysiwyg table { display: block; overflow-x: auto; }
+    .header { transition: top 0.2s linear; }
+    .header.isHidden { top: -90px; }
+    /*-------------------------------------------------------------*/
+    #main { position: relative; width: 100%; }
+    #main:after { content: ''; position: fixed; z-index: 10002; height: 0; width: 0; top: 0; right: 0; transition: width 0s 0.3s linear, height 0s 0.3s linear, background-color 0.3s linear; }
+
+    .header-menu > ul { display: none; }
+    .header-menu .toggle-menu { display: block; font-size: 35px; padding: 9px 0; color: #fff; position: relative; z-index: 10000; text-align: right; }
+    
+    .mobile-menu { display: block; background: #212121; position: fixed; top: 0; bottom: 0; right: -360px; width: 360px; overflow: auto; z-index: 10003; }
+    .mobile-menu > ul { display: block; }
+    .mobile-menu > ul > li > a { padding: 13px 15px; border-left: 5px solid #008388; }
+
+    .mobile-menu li a { display: inline-block; color: #fff; text-align: left; padding: 5px 25px; text-transform: uppercase; }
+    .mobile-menu li.header-menu-item--active > a { color: #008388; }
+    .mobile-menu li a.open-menu { color: #008388; }
+
+    .header-menu-open, .header-menu-open body, .header-menu-open #main { height: 100%; }
+    .header-menu-open #main { overflow: hidden; }
+    .header-menu-open #main:after { background: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; transition: background-color 0.3s 0s linear; }
+    /*-------------------------------------------------------------*/
+    #back-to-top { right: 15px; bottom: 15px; }
+}
+/*-----------------------------------------------------------------*/
+/*---------- Styles for Mobile 0 - 479px -----------*/
+/*-----------------------------------------------------------------*/
+@media screen and (max-width: 479px) {
+    .mobile-menu { right: -260px; width: 260px; }
+}

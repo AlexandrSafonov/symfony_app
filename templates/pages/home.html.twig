@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home page{% endblock %}
+
+{% block body %} 
+    {% include '/sections/hero-banner.html.twig' %}
+
+    {% include '/sections/news.html.twig' %}
+
+    {% include '/sections/image-section.html.twig' %}
+
+    {% include '/sections/testimonials.html.twig' %}
+    
+    {% include '/sections/signup-form.html.twig' %}
+{% endblock %}
