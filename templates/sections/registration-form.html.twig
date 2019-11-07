@@ -1,0 +1,24 @@
+<section class="content-section signup" style="background-image: url({{ asset('assets/images/backgrounds/signup-bg.jpg') }})">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-6">
+                <div class="signup-container">
+                    <h2 class="content-section-title">Sign Up</h2>
+                    {{ form_start(registrationForm, { 'attr' : { 'class' : 'form form-signup' } }) }}
+
+                    {% for child in registrationForm.children %}
+                        <div class="form-element">
+                            {{ form_widget(child, { 'attr' : { 'placeholder' :  child.vars.required ? child.vars.label ~ ' *' : child.vars.label } }) }}
+                        </div>
+                    {% endfor %}
+
+                    <div class="form-element">
+                        <button class="btn btn--base btn--lg" type="submit">Sign Up</button>
+                    </div>
+
+                    {{ form_end(registrationForm) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
