@@ -17,3 +17,5 @@ framework:
         
     templating:
         engines: ['twig', 'php']    
+        
+    validation: { enabled: true }    
