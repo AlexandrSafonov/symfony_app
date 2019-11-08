@@ -11,23 +11,20 @@ class RegistrationType extends AbstractType {
 
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
-                ->add('firstname', TextType::class, [
-                    'required' => true,
-                    'label' => 'First Name'
-                ])
-                ->add('lastname', TextType::class, [
-                    'required' => true,
-                    'label' => 'Last Name'
-                ])
-                ->add('email', TextType::class, [
-                    'required' => true,
-                    'label' => 'Email Address'
-                ])
-                ->add('phone', TextType::class, [
-                    'required' => false,
-                    'label' => 'Telephone Number'
-                ])
+                ->add('firstname', TextType::class)
+                ->add('lastname', TextType::class)
+                ->remove('username')
         ;
+    }
+    
+    public function getParent()
+    {
+        return 'FOS\UserBundle\Form\Type\RegistrationFormType';
+    }
+
+    public function getBlockPrefix()
+    {
+        return 'app_user_registration';
     }
 
     public function configureOptions(OptionsResolver $resolver) {

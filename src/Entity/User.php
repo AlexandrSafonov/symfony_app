@@ -2,45 +2,41 @@
 
 namespace App\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @ORM\Entity
+ * @ORM\Table(name="fos_user")
  */
-class User
+class User extends BaseUser
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
+     * @ORM\Id
      * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
     
     /**
      * @ORM\Column(type="string", length=255)
+     *
      */
-    private $firstname;
+    protected $firstname;
     
     /**
      * @ORM\Column(type="string", length=255)
+     *
      */
-    private $lastname;
+    protected $lastname;
     
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $email;
-    
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $phone;
 
-    public function getId(): ?int
+    public function __construct()
     {
-        return $this->id;
+        parent::__construct();
+        // your own logic
     }
-
+    
     public function getFirstname(): ?string
     {
         return $this->firstname;
@@ -61,30 +57,6 @@ class User
     public function setLastname(string $lastname): self
     {
         $this->lastname = $lastname;
-
-        return $this;
-    }
-
-    public function getEmail(): ?string
-    {
-        return $this->email;
-    }
-
-    public function setEmail(string $email): self
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    public function getPhone(): ?string
-    {
-        return $this->phone;
-    }
-
-    public function setPhone(string $phone): self
-    {
-        $this->phone = $phone;
 
         return $this;
     }

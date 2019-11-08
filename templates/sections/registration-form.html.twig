@@ -6,12 +6,31 @@
                     <h2 class="content-section-title">Sign Up</h2>
                     {{ form_start(registrationForm, { 'attr' : { 'class' : 'form form-signup' } }) }}
 
-                    {% for child in registrationForm.children %}
+                    {#{% for child in registrationForm.children %}
                         <div class="form-element">
                             {{ form_widget(child, { 'attr' : { 'placeholder' :  child.vars.required ? child.vars.label ~ ' *' : child.vars.label } }) }}
                         </div>
-                    {% endfor %}
+                    {% endfor %}#}
+                    <div class="form-element">
+                        {{ form_widget(registrationForm.firstname, { 'attr' : { 'placeholder' :  'First Name *', 'required' : true } }) }}
+                    </div>
 
+                    <div class="form-element">
+                        {{ form_widget(registrationForm.lastname, { 'attr' : { 'placeholder' :  'Last Name *', 'required' : true } }) }}
+                    </div>
+
+                    <div class="form-element">
+                        {{ form_widget(registrationForm.email, { 'attr' : { 'placeholder' :  'Email Address *', 'required' : true } }) }}
+                    </div>
+
+                    <div class="form-element">
+                        {{ form_widget(registrationForm.plainPassword.first, { 'attr' : { 'placeholder' :  'Password *', 'required' : true } }) }}
+                    </div>
+
+                    <div class="form-element">
+                        {{ form_widget(registrationForm.plainPassword.second, { 'attr' : { 'placeholder' :  'Password Confirmation *', 'required' : true } }) }}
+                    </div>
+                    
                     <div class="form-element">
                         <button class="btn btn--base btn--lg" type="submit">Sign Up</button>
                     </div>
