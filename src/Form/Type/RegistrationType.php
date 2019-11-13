@@ -13,7 +13,7 @@ class RegistrationType extends AbstractType {
         $builder
                 ->add('firstname', TextType::class)
                 ->add('lastname', TextType::class)
-                ->remove('username')
+//                ->remove('username')
         ;
     }
     

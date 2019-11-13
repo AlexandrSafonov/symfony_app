@@ -19,7 +19,11 @@
                     <div class="form-element">
                         {{ form_widget(registrationForm.email, { 'attr' : { 'placeholder' :  'Email Address *', 'required' : true } }) }}
                         {{ form_errors(registrationForm.email) }}
-                        {{ dump(registrationForm.email) }}
+                    </div>
+                    
+                    <div class="form-element">
+                        {{ form_widget(registrationForm.username, { 'attr' : { 'placeholder' :  'User Name *', 'required' : true } }) }}
+                        {{ form_errors(registrationForm.username) }}
                     </div>
 
                     <div class="form-element">

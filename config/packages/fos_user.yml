@@ -3,9 +3,11 @@ fos_user:
     firewall_name: main
     user_class: App\Entity\User
     from_email:
-        address: "test@gmail.com"
-        sender_name: "test"
+        address: test@gmail.com
+        sender_name: test
     registration:
-       form:
+        form:
            type: App\Form\RegistrationType    
-           validation_groups:  [Registration]
+           validation_groups: [Registration]
+    service:
+        mailer:  fos_user.mailer.twig_swift   
