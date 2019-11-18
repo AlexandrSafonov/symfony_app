@@ -129,7 +129,7 @@ class User implements UserInterface
     
     public function getUsername()
     {
-        return null;
+        return $this->email;
     }
 
     public function getRoles()
