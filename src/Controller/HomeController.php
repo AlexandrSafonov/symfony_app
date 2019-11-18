@@ -8,10 +8,11 @@ use App\Entity\Testimonials;
 use App\Entity\User;
 use App\Form\Type\RegistrationType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class HomeController extends Controller
 {
-    public function index(Request $request) 
+    public function index(Request $request, UserPasswordEncoderInterface $passwordEncoder) 
     {   
         $form = $this->getRegistrationForm();
 
@@ -19,7 +20,10 @@ class HomeController extends Controller
         
         if ($form->isSubmitted() && $form->isValid()) {
             $user = $form->getData();
-//            $user->setUsername('test');
+            
+            $password = $passwordEncoder->encodePassword($user, $user->getPlainPassword());
+            $user->setPassword($password);
+            
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();

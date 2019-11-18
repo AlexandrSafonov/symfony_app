@@ -7,35 +7,40 @@
                     {{ form_start(registrationForm, { 'attr' : { 'class' : 'form form-signup' } }) }}
 
                     <div class="form-element">
-                        {{ form_widget(registrationForm.firstname, { 'attr' : { 'placeholder' :  'First Name *', 'required' : true } }) }}
-                        {{ form_errors(registrationForm.firstname) }}
+                        {{ form_widget(registrationForm.firstname, { 'attr' : { 'placeholder' :  'First Name *' } }) }}
+                        <div class="form-error">
+                            {{ form_errors(registrationForm.firstname) }}
+                        </div>
                     </div>
 
                     <div class="form-element">
-                        {{ form_widget(registrationForm.lastname, { 'attr' : { 'placeholder' :  'Last Name *', 'required' : true } }) }}
-                        {{ form_errors(registrationForm.lastname) }}
+                        {{ form_widget(registrationForm.lastname, { 'attr' : { 'placeholder' :  'Last Name *' } }) }}
+                        <div class="form-error">
+                            {{ form_errors(registrationForm.lastname) }}
+                        </div>
                     </div>
 
                     <div class="form-element">
-                        {{ form_widget(registrationForm.email, { 'attr' : { 'placeholder' :  'Email Address *', 'required' : true } }) }}
-                        {{ form_errors(registrationForm.email) }}
-                    </div>
-                    
-                    <div class="form-element">
-                        {{ form_widget(registrationForm.username, { 'attr' : { 'placeholder' :  'User Name *', 'required' : true } }) }}
-                        {{ form_errors(registrationForm.username) }}
+                        {{ form_widget(registrationForm.email, { 'attr' : { 'placeholder' :  'Email Address *' } }) }}
+                        <div class="form-error">
+                            {{ form_errors(registrationForm.email) }}
+                        </div>
                     </div>
 
                     <div class="form-element">
-                        {{ form_widget(registrationForm.plainPassword.first, { 'attr' : { 'placeholder' :  'Password *', 'required' : true } }) }}
-                        {{ form_errors(registrationForm.plainPassword.first) }}
+                        {{ form_widget(registrationForm.plainPassword.first, { 'attr' : { 'placeholder' :  'Password *' } }) }}
+                        <div class="form-error">
+                            {{ form_errors(registrationForm.plainPassword.first) }}
+                        </div>
                     </div>
 
                     <div class="form-element">
-                        {{ form_widget(registrationForm.plainPassword.second, { 'attr' : { 'placeholder' :  'Password Confirmation *', 'required' : true } }) }}
-                        {{ form_errors(registrationForm.plainPassword.second) }}
+                        {{ form_widget(registrationForm.plainPassword.second, { 'attr' : { 'placeholder' :  'Password Confirmation *' } }) }}
+                        <div class="form-error">
+                            {{ form_errors(registrationForm.plainPassword.second) }}
+                        </div>
                     </div>
-                    
+
                     <div class="form-element">
                         <button class="btn btn--base btn--lg" type="submit">Sign Up</button>
                     </div>

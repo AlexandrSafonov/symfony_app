@@ -96,9 +96,6 @@
     "fig/link-util": {
         "version": "1.0.0"
     },
-    "friendsofsymfony/user-bundle": {
-        "version": "v2.1.2"
-    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
@@ -421,7 +418,7 @@
         ]
     },
     "symfony/templating": {
-        "version": "v4.3.6"
+        "version": "v4.3.8"
     },
     "symfony/test-pack": {
         "version": "v1.0.6"
