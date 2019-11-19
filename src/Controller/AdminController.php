@@ -10,6 +10,6 @@ class AdminController extends Controller
     public function index(Request $request) 
     {   
         
-        return $this->render('pages/admin.html.twig', []);
+        return $this->render('admin/admin.html.twig', []);
     }
 }

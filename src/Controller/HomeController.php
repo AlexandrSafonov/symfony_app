@@ -29,7 +29,7 @@ class HomeController extends Controller
             $entityManager->flush();
         }
         
-        return $this->render('pages/home.html.twig', [
+        return $this->render('home/landing.html.twig', [
             'news' => $this->getAllNews() ,
             'testimonials' => $this->getAllTestimonials(),
             'registrationForm' => $form->createView()

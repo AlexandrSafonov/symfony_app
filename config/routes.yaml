@@ -5,3 +5,11 @@ home:
 admin:
     path: /admin
     controller: App\Controller\AdminController::index  
+
+news:
+    path: /news
+    controller: App\Controller\NewsController::list      
+    
+news_single:
+    path: /news/{id}
+    controller: App\Controller\NewsController::single     

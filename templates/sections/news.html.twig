@@ -9,15 +9,12 @@
                         </div>
                         <h2 class="news-title">{{ item.title }}</h2>
                         <div class="news-description">{{ item.description }}</div>
+                        <div class="btn-wrap">
+                            <a href="{{ path('news_single', {'id' : item.id}) }}" class="btn btn--base btn--md" title="Read More">Read More</a>
+                        </div>
                     </div>
                 </div>
             {% endfor %}
         </div>
-        
-        {% if news | length > 6 %} 
-            <div class="btn-wrap">
-                <a href="#" class="btn btn--base btn--lg" title="Read More">Read More</a>
-            </div>
-        {% endif %}
     </div>
 </section>
